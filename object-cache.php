@@ -26,7 +26,11 @@ Author URI: http://scott.cariss.dev
 */
 
 // Stop direct access
-defined('ABSPATH') or exit;
+defined( 'ABSPATH' ) or exit;
+
+if( ! defined( 'SITE_UNDER_LOAD' ) ) {
+    define( 'SITE_UNDER_LOAD', true );
+}
 
 
 /**
