@@ -1,29 +1,10 @@
 <?php
-/*
-Plugin Name: WordPress APCu Object Cache Backend
-Plugin URI: https://github.com/l3rady/WordPress-APCu-Object-Cache
-Description: APCu backend for WordPress' Object Cache
-Version: 1.1
-Author: Scott Cariss
-Author URI: http://scott.cariss.dev
-*/
-
-/*  Copyright 2019  Scott Cariss  (email : scott@cariss.dev)
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-*/
+/**
+ * Plugin Name: APCu Object Cache Drop-in
+ * Version: 0.1
+ * License: GPL2 
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html 
+ */
 
 // Stop direct access
 defined( 'ABSPATH' ) or exit;
@@ -32,6 +13,9 @@ if( ! defined( 'SITE_UNDER_LOAD' ) ) {
     define( 'SITE_UNDER_LOAD', true );
 }
 
+if( ! defined( 'DISABLE_WP_CRON' ) ) {
+    define( 'DISABLE_WP_CRON', true );
+}
 
 /**
  * Adds data to the cache, if the cache key does not already exist.
